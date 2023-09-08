@@ -7,7 +7,7 @@ int main(int argc, char **argv) {
 
     std::string args = argv[1];
 
-    if (args == "--format") {
+    if (args == "--format" || "-f") {
       cpf->show();
     }
 
