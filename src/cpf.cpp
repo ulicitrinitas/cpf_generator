@@ -37,6 +37,18 @@ int CPF::gen_second_digit() {
 
 std::string CPF::get_m_numbs() { return this->m_numbs; }
 
+std::string CPF::format()
+{
+  std::string fmt = this->m_numbs;
+
+  fmt.insert(fmt.size() - 8, 1, '.');
+  fmt.insert(fmt.size() - 5, 1, '.');
+  fmt.insert(fmt.size() - 2, 1, '-');
+
+  return fmt;
+
+}
+
 int rand_gen(int seed) {
   const int buff_size = 64;
 

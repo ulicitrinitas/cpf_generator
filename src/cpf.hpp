@@ -21,6 +21,8 @@ class CPF{
         int gen_first_digit();
         int gen_second_digit();
 
+        std::string format();
+
     private:
         std::string m_numbs;
 };
