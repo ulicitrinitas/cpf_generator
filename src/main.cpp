@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
 
     std::string args = argv[1];
 
-    if (args == "--format" || "-f") {
+    if (args == "--format" || args == "-f") {
       cpf->show();
     }
     else {
