@@ -13,6 +13,19 @@ CPF::CPF()
     }
 }
 
+int CPF::gen_first_digit()
+{
+    int d1;
+
+    for(size_t i = 0, k = 0; i < this->m_numbs.size(); i++, k--){
+        d1 += std::stoi(this->m_numbs.substr(i, 1)) * k;
+    }
+
+}
+
+int CPF::gen_second_digit()
+{}
+
 std::string CPF::get_m_numbs()
 {
     return this->m_numbs;
