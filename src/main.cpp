@@ -6,4 +6,6 @@ int main(void)
 
     std::cout << cpf->get_m_numbs() << '\n';
 
+    cpf->show();
+
 }
