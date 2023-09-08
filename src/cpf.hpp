@@ -14,7 +14,7 @@
 int rand_gen(int);
 class CPF{
     public:
-        CPF(std::string);
+        CPF();
     private:
         std::string m_numbs;
 };

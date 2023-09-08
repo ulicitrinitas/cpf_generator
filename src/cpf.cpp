@@ -4,10 +4,13 @@
 #include <cstdlib>
 #include <sodium/core.h>
 #include <sodium/randombytes.h>
+#include <string>
 
-CPF::CPF(std::string nums)
+CPF::CPF()
 {
-    this->m_numbs = nums;
+    for(int i = 0; i < 9; i++){
+        this->m_numbs += std::to_string(rand_gen(10)); 
+    }
 }
 
 int rand_gen(int seed)
