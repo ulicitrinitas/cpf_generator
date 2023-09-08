@@ -1,0 +1,47 @@
+# Arquivos de compilação C++
+*.o
+*.out
+*.exe
+*.so
+*.a
+
+# Arquivos de saída de depuração
+*.dSYM/
+*.su
+
+# Arquivos gerados pelo CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+Testing/
+
+# Diretório de compilação (geralmente "build" ou "bin")
+bin/
+build/
+
+# Arquivos de projeto específicos (substitua pelo seu ambiente de desenvolvimento, por exemplo, Visual Studio)
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln
+*.suo
+*.ncb
+
+# Arquivos Lua compilados (bytecode)
+*.luac
+
+# Diretórios gerados pelo LuaRocks (gerenciador de pacotes Lua)
+lua_modules/
+
+# Logs e arquivos temporários
+*.log
+*.swp
+*.swo
+.DS_Store
+
+# Arquivos de configuração do sistema (exemplos: .clang-format, .editorconfig)
+.editorconfig
+
+# Diretório de saída padrão (pode variar dependendo do sistema e do ambiente de desenvolvimento)
+out/
