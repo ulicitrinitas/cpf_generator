@@ -1,4 +1,5 @@
 #include "cpf.hpp"
+#include <cstdlib>
 #include <iostream>
 
 int main(int argc, char **argv) {
@@ -13,6 +14,7 @@ int main(int argc, char **argv) {
     }
     else {
         std::cerr << "Parâmetro Inválido" << '\n';
+        return EXIT_FAILURE;
     }
 
   } else {
