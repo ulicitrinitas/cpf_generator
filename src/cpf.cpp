@@ -18,7 +18,7 @@ CPF::CPF() {
 int CPF::gen_first_digit() {
   int d1 = 0;
 
-  for (size_t i = 0, k = 0; i < this->m_numbs.size(); i++, k--) {
+  for (size_t i = 0, k = 10; i < this->m_numbs.size(); i++, k--) {
     d1 += std::stoi(this->m_numbs.substr(i, 1)) * k;
   }
 
@@ -28,7 +28,7 @@ int CPF::gen_first_digit() {
 int CPF::gen_second_digit() {
   int d2 = 0;
 
-  for (size_t i = 0, k = 0; i < this->m_numbs.size() - 1; i++, k--) {
+  for (size_t i = 0, k = 10; i < this->m_numbs.size() - 1; i++, k--) {
     d2 += std::stoi(this->m_numbs.substr(i + 1, 1)) * k;
   }
 
