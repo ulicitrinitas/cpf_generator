@@ -18,6 +18,9 @@ class CPF{
 
         std::string get_m_numbs();
 
+        int gen_first_digit();
+        int gen_second_digit();
+
     private:
         std::string m_numbs;
 };
