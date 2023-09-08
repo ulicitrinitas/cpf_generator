@@ -21,6 +21,9 @@ int CPF::gen_first_digit()
         d1 += std::stoi(this->m_numbs.substr(i, 1)) * k;
     }
 
+    return (d1 % 11 < 2)?
+        0 :
+        11 - (d1 % 11);
 }
 
 int CPF::gen_second_digit()
