@@ -10,6 +10,9 @@ CPF::CPF() {
   for (int i = 0; i < 9; i++) {
     this->m_numbs += std::to_string(rand_gen(10));
   }
+
+  this->m_numbs += std::to_string(this->gen_first_digit());
+  this->m_numbs += std::to_string(this->gen_second_digit());
 }
 
 int CPF::gen_first_digit() {
