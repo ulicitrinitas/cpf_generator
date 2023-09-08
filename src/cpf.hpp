@@ -11,6 +11,7 @@
 #include <pthread.h>
 #include <string>
 
+int rand_gen(int);
 class CPF{
     public:
         CPF(std::string);
@@ -18,5 +19,5 @@ class CPF{
         std::string m_numbs;
 };
 
-int rand_gen(int);
+
 
