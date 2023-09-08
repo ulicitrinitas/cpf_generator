@@ -13,6 +13,11 @@ CPF::CPF()
     }
 }
 
+std::string CPF::get_m_numbs()
+{
+    return this->m_numbs;
+}
+
 int rand_gen(int seed)
 {
     const int buff_size = 64;
