@@ -1,4 +1,5 @@
 #include "cpf.hpp"
+#include <iostream>
 
 int main(int argc, char **argv) {
   auto cpf = std::make_unique<CPF>();
@@ -9,6 +10,9 @@ int main(int argc, char **argv) {
 
     if (args == "--format" || "-f") {
       cpf->show();
+    }
+    else {
+        std::cerr << "Parâmetro Inválido" << '\n';
     }
 
   } else {
