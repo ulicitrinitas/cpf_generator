@@ -17,3 +17,6 @@ class CPF{
     private:
         std::string m_numbs;
 };
+
+int rand_gen(int);
+
