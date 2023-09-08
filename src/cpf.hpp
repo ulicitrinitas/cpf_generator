@@ -23,6 +23,8 @@ class CPF{
 
         std::string format();
 
+        void show();
+
     private:
         std::string m_numbs;
 };

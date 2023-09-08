@@ -49,6 +49,11 @@ std::string CPF::format()
 
 }
 
+void CPF::show()
+{
+  std::cout << this->format() << std::endl;
+}
+
 int rand_gen(int seed) {
   const int buff_size = 64;
 
