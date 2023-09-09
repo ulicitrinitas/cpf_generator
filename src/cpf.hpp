@@ -25,6 +25,8 @@ class CPF{
 
         void show();
 
+        bool check(std::string*);
+
     private:
         std::string m_numbs;
 };

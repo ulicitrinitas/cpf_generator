@@ -1,5 +1,7 @@
 #include "cpf.hpp"
 
+#include <algorithm>
+#include <cctype>
 #include <cstdint>
 #include <cstdlib>
 #include <sodium/core.h>
@@ -52,6 +54,24 @@ std::string CPF::format()
 void CPF::show()
 {
   std::cout << this->format() << std::endl;
+}
+
+bool CPF::check(std::string *cpf)
+{
+  cpf->erase(std::remove(cpf->begin(), cpf->end(), '.'), cpf->end());
+  cpf->erase(std::remove(cpf->begin(), cpf->end(), '-'), cpf->end());
+
+  if(!std::all_of(cpf->begin(), cpf->end(), isdigit)){
+    return false;
+  }
+
+  this->m_numbs = cpf->substr(0, 9);
+
+  this->m_numbs += std::to_string(this->gen_first_digit());
+  this->m_numbs += std::to_string(this->gen_second_digit());
+
+  return this->m_numbs == *cpf;
+
 }
 
 int rand_gen(int seed) {
